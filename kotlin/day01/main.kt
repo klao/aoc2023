@@ -26,10 +26,7 @@ val digit_map = mapOf(
 )
 
 fun digit(s: String): Int {
-    if (s in digit_map) {
-        return digit_map[s]!!
-    }
-    return s.toInt()
+        return digit_map[s] ?: s.toInt()
 }
 
 fun part2() {
