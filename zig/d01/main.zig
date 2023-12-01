@@ -1,9 +1,11 @@
 const std = @import("std");
 
+const input_file = "in/i01.txt";
+
 const digits = "0123456789";
 
 fn part1() !void {
-    var file = try std.fs.cwd().openFile("i01.txt", .{});
+    var file = try std.fs.cwd().openFile(input_file, .{});
     defer file.close();
 
     var buf_reader = std.io.bufferedReader(file.reader());
@@ -49,7 +51,7 @@ fn last_digit(line: []const u8) u8 {
 }
 
 fn part2() !void {
-    var file = try std.fs.cwd().openFile("i01.txt", .{});
+    var file = try std.fs.cwd().openFile(input_file, .{});
     defer file.close();
 
     var buf_reader = std.io.bufferedReader(file.reader());
